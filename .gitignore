@@ -1,0 +1,10 @@
+node_modules
+bower_components
+.sass-cache
+
+_build/templates/getdialingfordollars/extendscripts
+_build/templates/getdialingfordollars/scss/bourbon
+_build/templates/getdialingfordollars/scss/neat
+_build/templates/getdialingfordollars/scss/font-awesome
+
+*.css.map

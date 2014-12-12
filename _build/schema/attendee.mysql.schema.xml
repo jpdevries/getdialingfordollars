@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="attendee" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" tablePrefix="ext_" phpdoc-package="attendee" phpdoc-subpackage="model">
+        <!-- extend the modUser class -->
+        <object class="d4dAttendee" extends="modUser">
+                <composite alias="Data" local="id" class="Userdata" foreign="userdata_id" cardinality="one" owner="local" />
+        </object>
+        <object class="Userdata" table="attendee_pmnt" extends="xPDOSimpleObject">
+                <field key="userdata_id" dbtype="int" precision="11" phptype="integer" null="false" attributes="unsigned"/>
+                
+                <field key="card_name" dbtype="tinytext" precision="100" phptype="string" null="true" />
+                <field key="card_type" dbtype="tinytext" precision="100" phptype="string" null="true" />
+                <field key="card_number" dbtype="tinytext" precision="100" phptype="string" null="true" />
+                <field key="expiry_date" dbtype="tinyint" precision="2" attributes="unsigned" phptype="integer" null="true" />
+                <field key="expiry_year" dbtype="tinyint" precision="4" attributes="unsigned" phptype="integer" null="true" />
+                <field key="validation_code" dbtype="tinyint" precision="3" attributes="unsigned" phptype="integer" null="true" />
+
+                
+                <index alias="userdata_id" name="userdata_id" primary="false" unique="true" type="BTREE">
+                    <column key="userdata_id" length="" collation="A" null="false" />
+                </index>
+                <aggregate alias="d4dAttendee" local="userdata_id" foreign="id" cardinality="one" owner="foreign" />
+        </object>
+ </model>

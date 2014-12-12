@@ -1,0 +1,49 @@
+{
+  "name": "neat-pages",
+  "version": "0.0.1",
+  "author": {
+    "name": "",
+    "url": ""
+  },
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "dependencies": {
+    "bourbon": "^4.0.2",
+    "neat": "^1.7.0",
+    "font-awesome": "^4.2.0"
+  },
+  "exportsOverride": {
+    "bourbon": {
+      "": "dist/"
+    },
+    "neat": {
+      "": "app/assets/stylesheets/"
+    },
+    "typeahead.js": {
+      "": "dist/"
+    },
+    "font-awesome": {
+      "scss": [
+        "scss"
+      ],
+      "fonts": [
+        "fonts"
+      ],
+      "less": [
+        "less"
+      ],
+      "css": [
+        "css"
+      ]
+    }
+  },
+  "devDependencies": {
+    "typeahead.js": "~0.10.5"
+  }
+}

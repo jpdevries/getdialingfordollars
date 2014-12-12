@@ -1,0 +1,6 @@
+%click-happy {
+    width:100%;
+    @include media($desktop) {
+        width:auto;
+    }
+}
